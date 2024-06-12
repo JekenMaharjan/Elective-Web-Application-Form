@@ -1,0 +1,77 @@
+
+Relational -> light DB (i.e. MySQL, PostgreSQL, Oracle SQL)
+Non-relational -> (i.e. MongoDB, DynamoDB)
+
+
+# Benefits of CMS(Content Management System):
+-> User-friendliness
+-> Quick Deployment
+-> Base of maintenance, including updates
+-> Cost-efficiency, especially with out-the-box solutions, open sourcesor freeware
+-> Extendable funtionality, through a large number of plugins and extensions
+-> SEO-friendly features
+-> Developer and community support
+
+Important NOTE : merchendiea euta lirakha - Blog euta chahi banau - domain euta chahi lirakha 
+
+# Web Application Frameworks:
+-> is a s/w Framework that is designed to support the development of web applicaitons including web services, web resources, and web APIs.
+-> provide a standard way to build and deploy web applications on the world wide web.
+-> aim to automate the overhead associated with common activites performed in web development.
+-> for eg. many web Framework provide libraries for DB access, templating Frameworks, and sesson management and they often promote code reuse.
+-> rapid development hunxa
+-> Although they often target development of dynamic web sites, they are also applicable to static websites.
+-> top 10 Frameworks kun kun ho check net ma...
+
+# Features of WAF:
+-> Web template system
+-> caching
+-> security
+-> database access, mapping and configuration
+-> URL mapping
+-> ajax(Important siknaparxa)
+-> web services
+-> web resources
+
+# Framework Architecture:
+-> model-view- controller(MVC)
+    -> Laravel
+-> push-based vs pull based
+    -> django, RoR, Symfony
+-> three-tier organization
+    -> client, applicaiton, database
+
+# Advantages of WAF:
+-> rapid development 
+-> cost and timeefficient
+-> code reusability
+-> scalable, fast and secure
+-> well organized applications 
+-> flexibility and highly customizable
+-> well supported
+
+# Difference between CMS Vs WAF:
+
+# Web Information Systems:
+-> is an information system that uses internet web technologies to deliver information and services, to users or other information systems/applications.
+-> purpose is to publish and maintain data using hypertext-based principles.
+
+# Web Solution:
+-> what is it and its advantages ?
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CHAPTER : Web Technologies and Applications - Web 2.0
+
+# Introduction:
+-> social-media ko boom vakodekhi important xa
+-> rich web application, web-oriented architecture and social web huna paryo - yo 3 ota le baneko vanxa web 2.0
+-> technically chahi kei change xina web 2.0 ma tara uses chahi chanage vako xa
+
+# Characteristics of Web 2.0:
+-> Folksonomy - social media ma jati pani tagging garira hunxa teslai Folksonomy vanxa
+-> user participation
+-> Software as a service(Saas)
+
+# Advantages of Web 2.0:

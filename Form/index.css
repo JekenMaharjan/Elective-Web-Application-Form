@@ -29,6 +29,7 @@ body{
     background-color: rgb(224, 224, 224);
     color: white;
     padding-left: 80px;
+    padding-right: 60px;
     flex-direction: column;
     row-gap: 20px;
 }
@@ -56,21 +57,22 @@ h1{
 
 .gender{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     column-gap: 10px;
 }
 
 .hobbies{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     column-gap: 10px;
 }
 
 .skills{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     column-gap: 10px;
 }
+
 
 input[type=text],
 input[type=email],
@@ -101,12 +103,17 @@ input[type=number]{
     display: flex;
     flex-direction: row;
     column-gap: 15px;
+    width: 1px;
     height: 70px;
     padding: 10px;
 }
 
 select{
     width: 200px;
+}
+
+#countri{
+    border-radius: 5px;
 }
 
 .submit{
@@ -123,12 +130,18 @@ button{
     cursor: pointer;
 }
 
+.newcount {
+    display: flex;
+    flex-direction: row;
+}
+
 #error1,
 #error2,
 #error3,
 #error4,
 #error5,
 #error6,
+#error8,
 #error7{
     color: red;
     font-size: 14px;

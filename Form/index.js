@@ -1,105 +1,82 @@
+function validate(event) {
+    event.preventDefault(); // Prevent form submission for validation
 
-// function validate(){
-//     var Name = document.getElementById("name").value;
-//     var Phone = document.getElementById("phone").value;
-//     var Email = document.getElementById("email").value;
-//     var Address = document.getElementById("address").value;
+    // Capture the current values of the form fields
+    const Name = document.getElementById("name").value;
+    const Phone = document.getElementById("phone").value;
+    const Email = document.getElementById("email").value;
+    const Address = document.getElementById("address").value;
+    const Gender = document.querySelector('input[name="Gender"]:checked');
+    const Hobbies = document.querySelectorAll('input[name="hobs[]"]:checked');
+    const Skills = document.querySelectorAll('input[name="skll[]"]:checked');
+    const Country = document.getElementById("countri").value;
 
-    
-    
-//     if(Name == "" || Phone == "" || Email == "" || Address == "" ){
-//         alert("All field are Mandatory..!!");
-//         // document.getElementById("error1").innerHTML="*Please enter your name";
-//         // document.getElementById("error2").innerHTML="*Please enter your phone number";
-//         // document.getElementById("error3").innerHTML="*Please enter your email address";
-//         // // document.getElementById("error4").innerHTML="*Please select your gender";
-//         // document.getElementById("error5").innerHTML="*Please enter your address";
-//         // // document.getElementById("error6").innerHTML="*Please select your hobbies";
-//         // // document.getElementById("error7").innerHTML="*Please select your skills";
-//         // // return false;
-//     }
-     
-//     // else if(Name.length<3 || Name.length>50){
-//     //     document.getElementById("error1").innerHTML="*Only 3-50 letters";
-//     //     // return false;
-//     // }
+    let valid = true;
 
-//     // else if(Name.length>3 || Name.length<50){
-//     //     document.getElementById("error1").innerHTML="";
-//     //     // return true;
-//     // }
+    // Clear previous error messages
+    document.getElementById("error1").innerHTML = "";
+    document.getElementById("error2").innerHTML = "";
+    document.getElementById("error3").innerHTML = "";
+    document.getElementById("error4").innerHTML = "";
+    document.getElementById("error5").innerHTML = "";
+    document.getElementById("error6").innerHTML = "";
+    document.getElementById("error7").innerHTML = "";
+    document.getElementById("error8").innerHTML = "";
 
-//     // else if(isNaN(Phone)){
-//     //     document.getElementById("error2").innerHTML="*Only Numbers are allowed...";
-//     //     return false;
-//     // }
+    // Validate each field
+    if (Name === "") {
+        document.getElementById("error1").innerHTML = "*Please enter your name";
+        valid = false;
+    }
 
-//     // else if(Phone.length=0 ||Phone.length<10 || Phone.length>10){
-//     //     document.getElementById("error2").innerHTML="*Only 10 digits";
-//     //     return false;
-//     // }
+    if (Phone === "") {
+        document.getElementById("error2").innerHTML = "*Please enter your phone number";
+        valid = false;
+    } else if (isNaN(Phone) || Phone.length !== 10) {
+        document.getElementById("error2").innerHTML = "*Please enter a valid 10-digit phone number";
+        valid = false;
+    }
 
-//     // else if(Phone.length=10){
-//     //     document.getElementById("error2").innerHTML="";
-//     //     return true;
-//     // }
+    if (Email === "") {
+        document.getElementById("error3").innerHTML = "*Please enter your email address";
+        valid = false;
+    } else if (!Email.match(/^[A-Za-z\._\-0-9]+@[A-Za-z]+\.[a-z]{2,4}$/)) {
+        document.getElementById("error3").innerHTML = "*Please enter a valid email address";
+        valid = false;
+    }
 
-//     // else if(!Email.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
-//     //     document.getElementById("error3").innerHTML="*Please Enter valid email..";
-//     //     return false;
-//     // }
+    if (Gender === null) {
+        document.getElementById("error4").innerHTML = "*Please select your gender";
+        valid = false;
+    }
 
-//     // else if(Email.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
-//     //     document.getElementById("error3").innerHTML="";
-//     //     return true;
-//     // }
+    if (Address === "") {
+        document.getElementById("error5").innerHTML = "*Please enter your address";
+        valid = false;
+    }
 
-//     // // For radio
+    if (Hobbies.length === 0) {
+        document.getElementById("error6").innerHTML = "*Please select at least one hobby";
+        valid = false;
+    }
 
-//     // if(radio1.checked == true){
-//     //     document.getElementById("error4").innerHTML="";
-//     //     true;
-//     // }
-//     // else if(radio2.checked == true){
-//     //     document.getElementById("error4").innerHTML="";
-//     //     true;
-//     // }
-//     // else{
-//     //     document.getElementById("error4").innerHTML="*Please select Gender..";
-//     //     return false;
-//     // }
+    if (Skills.length === 0) {
+        document.getElementById("error7").innerHTML = "*Please select at least one skill";
+        valid = false;
+    }
 
-//     // // Address
-//     // if(Address != ""){
-//     //     document.getElementById("error5").innerHTML="";
-//     // }
+    if (Country === ""){
+        document.getElementById("error8").innerHTML = "*Please select your Country";
+        valid = false;
+    }
 
-//     // // For checkbox
-//     // if(document.getElementById("football").checked){
-//     //     valid = true;
-//     // }
+    if (valid) {
+        alert("Your form has been submitted !!");
+        document.querySelector('form').submit(); // Submit the form if valid
+    } else {
+        alert("Please fill in all required fields.");
+    }
+}
 
-//     // else if(document.getElementById("basketball").checked){
-//     //     valid = true;
-//     // }
-
-//     // else if(document.getElementById("table-tennis").checked){
-//     //     valid = true;
-//     // }
-
-//     // else if(document.getElementById("guitar").checked){
-//     //     valid = true;
-//     // }
-
-//     // if(valid){
-//     //     alert("Your Form has been Submitted..!!")
-//     // }
-
-//     // else{
-//     //     alert("Please select Hobbies..!!");
-//     //     return false;
-//     // }
-//     else{
-//         alert("Your form has been submitted !!");
-//     }
-// }
+// Attach the validate function to the form's submit event
+document.querySelector('form').addEventListener('submit', validate);

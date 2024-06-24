@@ -7,11 +7,9 @@
     <title>Web Application 1</title>
     
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-
 </head>
 <body>
-    <form method="POST" action="form.php">
+    <form method="POST" onsubmit="return validate()" action="form.php">
     <!-- login box -->
     <div class="login-box">
         <!-- heading -->
@@ -38,8 +36,8 @@
         <div class="gender">
             <fieldset class="gies">
                 <legend>Gender</legend>
-                <input type="radio" name="Gender" id="male" value="male" required><label for="male">Male</label>
-                <input type="radio" name="Gender" id="female"  value="female" required><label for="female">Female</label>
+                <input type="radio" name="Gender" id="male" value="male"><label for="male">Male</label>
+                <input type="radio" name="Gender" id="female"  value="female"><label for="female">Female</label>
             </fieldset>
             <p id="error4"></p>
         </div>
@@ -52,7 +50,7 @@
         <!-- hobbies -->
         <div class="hobbies">
             <fieldset class="fies">
-                <legend >Hobbies</legend>
+                <legend>Hobbies</legend>
                 <input type="checkbox" name="hobs[]" id="football" value="football" ><label for="Football">Football</label>
                 <input type="checkbox" name="hobs[]" id="basketball" value="basketball" ><label for="Basketball">Basketball</label>
                 <input type="checkbox" name="hobs[]" id="table-tennis" value="table-tennis" ><label for="TableTennis">Table-Tennis</label>
@@ -74,19 +72,26 @@
         <!-- country -->
         <div class="country">
         <label>Country :</label>
-        <select id="country" name="contree">
-            <option>Nepal</option>
-            <option>India</option>
-            <option>China</option>
-            <option>Bhutan</option>
-            <option>Korea</option>
-        </select>
+        <div class="newcount">
+            <select id="countri" name="contree">
+                <option value="">Select your country</option>
+                <option value="Nepal">Nepal</option>
+                <option value="India">India</option>
+                <option value="China">China</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Korea">Korea</option>
+            </select>
+            <p id="error8"></p>
+        </div>
         </div>
         <!-- submit button -->
         <div class="submit">
+            <!-- <button type="submit">Submit</button> -->
             <button onclick="validate()">Submit</button>
         </div>
     </div>
-</form>
+    </form>
+    <!-- Link to External JavaScript File -->
+    <script src="index.js"></script>
 </body>
 </html>

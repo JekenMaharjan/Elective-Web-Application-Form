@@ -1,2 +1,3 @@
 # Elective-Web-Application-Form
-Elective -> Web Application ko complete form 
+
+📝 A complete web form for Elective subject selection built using HTML, CSS, JS, and PHP. Simple, responsive, and functional.
